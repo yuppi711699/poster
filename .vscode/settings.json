@@ -1,0 +1,22 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "prettier.semi": false,
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "bytecode",
+    "decripted",
+    "DIFC",
+    "hashgraph",
+    "Hbar",
+    "hbars",
+    "hedera",
+    "Inheritee",
+    "localstorage",
+    "Tinybars"
+  ],
+}
