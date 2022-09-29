@@ -1,8 +1,37 @@
 const { SetInheriteeKey, SetInheritor, GetInheritorKey, GetFileCount, AddFile, GetFile, EncryptFile, CalculateHash, DecryptFile } = require('../client')
+// window.DIFCClient = require('../client')
 
-window.DIFCClient = require('../client')
 
-async function test () {
+///EDITED////////////
+const express = require('express')
+let cors = require('cors')
+const path = require('path')
+const bodyParser = require('body-parser');
+let PORT = 3080
+
+const DIFCClient = require('../client')
+const app = express()
+  .set('port', PORT)
+  // .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+
+app.use(bodyParser.json());
+app.use(cors())
+
+app.get('/', function (req, res) {
+  // console.log('LIVEEE')
+  res.sendFile(path.join(__dirname, 'index.html'));
+  // res.sendFile(path.join(__dirname, 'views', 'index.html'));
+  // res.send('Get ready for new research! Delivered by Deca4');
+  // res.send('Delivered to deca4 By Dmytriy and Zahar!');
+})
+app.listen(app.get('port'), function () {
+  console.log('Node app is running on http://localhost:' + PORT + '');
+})
+
+
+//////////////////////////////
+async function test() {
   const newContractId = '0.0.47856905'
   const addr = '0000000000000000000000000000000002d94f1a'
 
@@ -32,7 +61,7 @@ async function test () {
   console.log(`File contents ${file}`)
 
   const content =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   const encryptedFile = await EncryptFile(content, inheritorKey)
   const hashEncryptedFile = await CalculateHash(encryptedFile)
   console.log(`Hash encrypted file: ${hashEncryptedFile}`)

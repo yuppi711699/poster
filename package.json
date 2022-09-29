@@ -7,6 +7,7 @@
     "test-all": "mocha --timeout 30000 tests/*.js",
     "test-client": "mocha --timeout 10000 tests/client.test.js",
     "demo-browser": "parcel src/example/index.html",
+    "server": "node src/example/example.js",
     "demo-build": "parcel build",
     "test-stored": "mocha --timeout 10000 tests/stored.test.js",
     "test-server": "mocha --timeout 10000 tests/server.test.js",
@@ -18,10 +19,14 @@
   "license": "ISC",
   "dependencies": {
     "@hashgraph/sdk": "^2.17.0",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "js-sha512": "^0.8.0",
-    "localstorage-polyfill": "^1.0.1"
+    "localstorage-polyfill": "^1.0.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "assert": "^2.0.0",
@@ -37,6 +42,7 @@
     "https-browserify": "^1.0.0",
     "js-sha256": "^0.9.0",
     "mocha": "^10.0.0",
+    "nodemon": "^2.0.20",
     "os-browserify": "^0.3.0",
     "parcel": "^2.7.0",
     "prettier": "^2.7.1",

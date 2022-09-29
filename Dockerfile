@@ -13,8 +13,8 @@ RUN npm install
 # копируем исходный код
 COPY . .
 #определяем порт для ноды
-RUN npm run demo-build
+#RUN npm run demo-build
 EXPOSE 3080
 #запуск внутри докера
 #CMD [ "node", "index.js" ]
-CMD ["parcel", "src/example/index.html"]
+CMD ["node", "src/example/example.js"]
