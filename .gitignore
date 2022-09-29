@@ -6,7 +6,7 @@
 .pnp.js
 /package-lock.json
 # Игнорирование файла содержащий переменные окружения  
-.env 
+.env   
 
 # misc
 .DS_Store
