@@ -1,4 +1,4 @@
-FROM node:12  
+FROM node:18  
 #скачали ноду с докер хаба
 WORKDIR /usr/src/app
 #переходим в эту деректорию
