@@ -1,6 +1,6 @@
 FROM node:18  
 #скачали ноду с докер хаба
-WORKDIR /usr/src/app
+WORKDIR /usr/src/example/app
 #переходим в эту деректорию
 #https://nodejs.org/ru/docs/guides/nodejs-docker-webapp/
 # скопировать оба файла: package.json и package-lock.json

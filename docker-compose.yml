@@ -3,9 +3,9 @@ services:
 #qweas17
 # main
    web:
-     image: metadata-api-nodejs
+     image: deca4-will
      build: .
-     container_name: metadata-api-nodejs
+     container_name: deca4-will
      restart: always
      ports:
        - "8080:80"
