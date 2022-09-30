@@ -16,5 +16,6 @@ COPY . .
 #RUN npm run demo-build
 EXPOSE 3080
 #запуск внутри докера
-CMD [ "node", "src/index.js" ]
+CMD [ "npm", "run", "start"]
+# "src/index.js" ]
 # CMD ["node", "src/example/example.js"]
