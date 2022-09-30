@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import DIFCClient from './client';
+import * as DIFCClient from './client/index.js';
 
 function App () {
   window.DIFCClient = DIFCClient;
