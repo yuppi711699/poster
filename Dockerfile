@@ -1,6 +1,6 @@
 FROM node:18  
 #скачали ноду с докер хаба
-WORKDIR /usr/src/example/app
+WORKDIR /usr/src/app
 #переходим в эту деректорию
 #https://nodejs.org/ru/docs/guides/nodejs-docker-webapp/
 # скопировать оба файла: package.json и package-lock.json
@@ -16,5 +16,5 @@ COPY . .
 #RUN npm run demo-build
 EXPOSE 3080
 #запуск внутри докера
-#CMD [ "node", "index.js" ]
-CMD ["node", "src/example/example.js"]
+CMD [ "node", "src/index.js" ]
+# CMD ["node", "src/example/example.js"]
